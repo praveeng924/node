@@ -21,3 +21,8 @@ console.log(todo.name);
     
     });
     app.listen(port,() =>console.log(`App listening on port ${port}!`));
+    app.get("/delete",function(req,res){
+
+        const todo2=todo.deleteTodo(req.query.id);
+        res.json(todo2);
+    });
